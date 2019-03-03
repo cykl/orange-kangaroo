@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * Factory methods to help automatic and exploratory testing of book persistance.
  */
-final class BookData {
+public final class BookData {
 
     private static final String[] AUTHORS = {
             "Steve McConnell",
