@@ -1,5 +1,7 @@
 package ricardo.monitoring.dbaudit;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.StringJoiner;
 
 public final class AuditedOp {
@@ -7,7 +9,10 @@ public final class AuditedOp {
     private final DbOp op;
     private final String id;
 
-    public AuditedOp(DbOp op, String id) {
+    public AuditedOp(
+            @JsonProperty("op") DbOp op,
+            @JsonProperty("id") String id) {
+
         this.op = op;
         this.id = id;
     }
